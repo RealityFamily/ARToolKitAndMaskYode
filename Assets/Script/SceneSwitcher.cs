@@ -25,7 +25,7 @@ public class SceneSwitcher : MonoBehaviour
     public void SwitchSceneAR()
     {
 #if (!UNITY_EDITOR && UNITY_ANDROID)
-         xmgAugmentedFaceBridge.xzimgCamera_delete();
+         //xmgAugmentedFaceBridge.xzimgCamera_delete();
 #endif
         SceneManager.LoadScene(sceneName: "Ar");
     }
