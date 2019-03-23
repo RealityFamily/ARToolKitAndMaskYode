@@ -125,8 +125,8 @@ public class xmgAugmentedFace : xmgAugmentedFaceBase
             int res = xmgAugmentedFaceBridge.xzimgCamera_getImage(m_capturePlane.m_PixelsHandle.AddrOfPinnedObject());
 #endif
         }
-        m_detectedStatus = xmgAugmentedFaceBridge.xzimgRigidTracking(ref m_image, ref trackingParams, ref rigidData);
         m_capturePlane.ApplyTexture();
+        m_detectedStatus = xmgAugmentedFaceBridge.xzimgRigidTracking(ref m_image, ref trackingParams, ref rigidData);
 
         // -- Manage device rotations
         if (m_detectedStatus == 0)

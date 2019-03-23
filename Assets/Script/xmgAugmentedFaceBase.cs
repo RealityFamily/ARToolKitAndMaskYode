@@ -189,6 +189,7 @@ public class xmgAugmentedFaceBase : MonoBehaviour
 
     public void SwitchCamera()
     {
+        SwitchNoRender();
 #if (!UNITY_EDITOR && UNITY_ANDROID) || (!UNITY_EDITOR && UNITY_IOS)
         int front = 1 - videoParams.m_frontal;
         xmgAugmentedFaceBridge.xzimgCamera_delete();
@@ -198,8 +199,19 @@ public class xmgAugmentedFaceBase : MonoBehaviour
         m_capturePlane.SetMirror(front);
         xmgAugmentedFaceBridge.xzimgCamera_create(ref videoParams);
 #endif
-
+        Invoke("SwitchOnRender", 1f);
     }
+
+    public void SwitchNoRender()
+    {
+        Camera.main.cullingMask = 0;
+    }
+
+    public void SwitchOnRender()
+    {
+        Camera.main.cullingMask = 1;
+    }
+
 };
 
     
