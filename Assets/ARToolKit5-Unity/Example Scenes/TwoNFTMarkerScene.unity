@@ -790,23 +790,40 @@ MonoBehaviour:
   videoConfigurationAndroid0: -width=1920 -height=1080
   videoConfigurationWindowsStore0: -device=WinMC -format=BGRA -position=rear
   videoConfigurationLinux0: 
-  BackgroundLayer0: 0
+  BackgroundLayer0: 8
   VideoIsStereo: 0
   transL2RName: transL2R
-  videoCParamName1: optical_param_right
-  videoConfigurationWindows1: -devNum=1 -showDialog -flipV
+  videoCParamName1: 
+  videoConfigurationWindows1: -devNum=2 -showDialog -flipV
   videoConfigurationMacOSX1: -source=1 -width=640 -height=480
   videoConfigurationiOS1: 
   videoConfigurationAndroid1: 
   videoConfigurationWindowsStore1: -device=WinMC -format=BGRA
   videoConfigurationLinux1: 
-  BackgroundLayer1: 0
+  BackgroundLayer1: 9
   NearPlane: 0.01
   FarPlane: 5
   ContentRotate90: 0
   ContentFlipH: 0
   ContentFlipV: 0
   ContentAlign: 4
+  DeviceRotation:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
   currentContentMode: 1
   currentThresholdMode: 0
   currentThreshold: 100
