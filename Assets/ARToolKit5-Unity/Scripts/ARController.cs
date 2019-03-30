@@ -43,6 +43,7 @@ using UnityEngine;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading;
+using UnityEngine.SceneManagement;
 
 public enum ContentMode
 {
@@ -324,6 +325,22 @@ public class ARController : MonoBehaviour
     // MonoBehavior methods.
     //
 
+
+    public void KillAR()
+    {
+        StopAR();
+        if (!PluginFunctions.arwShutdownAR())
+        {
+            Log(LogTag + "Error shutting down ARToolKit.");
+        }
+    }
+
+    public void RestartAR()
+    {
+
+        //StartAR();
+    }
+
     void Awake()
     {
         //Log(LogTag + "ARController.Awake())");
@@ -388,8 +405,12 @@ public class ARController : MonoBehaviour
         }
     }
 
+  
+
+
     void Start()
     {
+
         //Log(LogTag + "ARController.Start()");
 
         // Ensure ARMarker objects that were instantiated/deserialized before the native interface came up are all loaded.
